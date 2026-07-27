@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de Consumo de Energia - Rio Sustentável">
+    <title>Calculadora de Consumo - Rio Sustentável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🌱 Rio Sustentável</h1>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dicas.html">Dicas de Economia</a></li>
+                    <li><a href="calculadora.html" class="active">Calculadora</a></li>
+                    <li><a href="energias-limpas.html">Energias Renováveis</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>🧮 Calculadora de Consumo de Energia</h1>
+                <p>Descubra quanto cada aparelho consome e quanto você gasta por mês</p>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-info">
+                    <div class="info-box">
+                        <h3>💰 Tarifa de Energia no RJ</h3>
+                        <p>Valor médio da Light: <strong>R$ 0,85/kWh</strong></p>
+                        <small>*Valor aproximado para fins educacionais</small>
+                    </div>
+                </div>
+
+                <div class="calculator-wrapper">
+                    <div class="calculator-form">
+                        <h2>Adicione seus Aparelhos</h2>
+                        <p class="form-description">Preencha as informações dos aparelhos que você usa em casa</p>
+                        
+                        <div id="appliancesContainer">
+                            <div class="appliance-item" data-index="0">
+                                <div class="appliance-header">
+                                    <h3>Aparelho 1</h3>
+                                    <button type="button" class="btn-remove" onclick="removeAppliance(0)" style="display: none;">✕</button>
+                                </div>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="name0">Nome do Aparelho</label>
+                                        <select id="name0" class="appliance-name">
+                                            <option value="">Selecione...</option>
+                                            <option value="Chuveiro" data-power="5500">Chuveiro Elétrico (5500W)</option>
+                                            <option value="Ar-condicionado" data-power="1500">Ar-condicionado (1500W)</option>
+                                            <option value="Geladeira" data-power="150">Geladeira (150W)</option>
+                                            <option value="TV" data-power="100">TV LED (100W)</option>
+                                            <option value="Notebook" data-power="65">Notebook (65W)</option>
+                                            <option value="Ferro de passar" data-power="1000">Ferro de Passar (1000W)</option>
+                                            <option value="Micro-ondas" data-power="1200">Micro-ondas (1200W)</option>
+                                            <option value="Máquina de lavar" data-power="500">Máquina de Lavar (500W)</option>
+                                            <option value="Ventilador" data-power="100">Ventilador (100W)</option>
+                                            <option value="Computador" data-power="300">Computador Desktop (300W)</option>
+                                            <option value="Lâmpada LED" data-power="10">Lâmpada LED (10W)</option>
+                                            <option value="Outro" data-power="0">Outro (personalizado)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="power0">Potência (Watts)</label>
+                                        <input type="number" id="power0" class="appliance-power" placeholder="Ex: 1500" min="1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="hours0">Horas por Dia</label>
+                                        <input type="number" id="hours0" class="appliance-hours" placeholder="Ex: 4" min="0" max="24" step="0.5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="days0">Dias por Mês</label>
+                                        <input type="number" id="days0" class="appliance-days" placeholder="Ex: 30" min="1" max="31" value="30">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary" onclick="addAppliance()">+ Adicionar Outro Aparelho</button>
+                        <button type="button" class="btn btn-primary" onclick="calculateConsumption()">Calcular Consumo</button>
+                    </div>
+
+                    <div class="calculator-results" id="results" style="display: none;">
+                        <h2>📊 Resultados</h2>
+                        <div class="result-summary">
+                            <div class="result-card">
+                                <div class="result-label">Consumo Total</div>
+                                <div class="result-value" id="totalKwh">0 kWh</div>
+                                <div class="result-sublabel">por mês</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-label">Custo Total</div>
+                                <div class="result-value highlight" id="totalCost">R$ 0,00</div>
+                                <div class="result-sublabel">por mês</div>
+                            </div>
+                        </div>
+
+                        <div class="results-details" id="detailedResults"></div>
+
+                        <div class="suggestions" id="suggestions">
+                            <h3>💡 Sugestões de Economia</h3>
+                            <div id="suggestionsList"></div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary" onclick="resetCalculator()">Novo Cálculo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <h2>Como Funciona o Cálculo?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>1. Potência (Watts)</h3>
+                        <p>É a quantidade de energia que o aparelho consome quando está ligado. Geralmente está na etiqueta do produto.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>2. Tempo de Uso</h3>
+                        <p>Multiplique as horas por dia pelos dias do mês que você usa o aparelho.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>3. Consumo (kWh)</h3>
+                        <p>Potência × Tempo de Uso ÷ 1000 = kWh (quilowatt-hora)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>4. Custo (R$)</h3>
+                        <p>Multiplique o consumo em kWh pela tarifa da Light (R$ 0,85/kWh)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌱 Rio Sustentável</h3>
+                    <p>Promovendo energia limpa e consumo consciente no estado do Rio de Janeiro</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dicas.html">Dicas</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                        <li><a href="energias-limpas.html">Energias Renováveis</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Projeto Educacional</p>
+                    <p>Rio de Janeiro - RJ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rio Sustentável. Projeto Universitário sobre Energia Sustentável.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
