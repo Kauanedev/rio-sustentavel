@@ -320,7 +320,12 @@ function generateSuggestions(totalKwh, totalCost) {
             <div class="suggestion-item">
                 <span style="font-size: 1.5rem; margin-right: 10px;">${suggestion.icon}</span>
                 ${suggestion.text}
-                ${suggestion.action ? `<a href="dicas.html" style="margin-left: 10px; font-weight: 600;">${suggestion.action} →</a>` : ''}
+                ${suggestion.action
+                    ? `<a href="${suggestion.action === 'Ver Dicas' ? 'dicas.html' : 'energias-limpas.html'}" style="margin-left: 10px; font-weight: 600;">
+                        ${suggestion.action} →
+                      </a>`
+                    : ''
+                }
             </div>
         `;
     });
