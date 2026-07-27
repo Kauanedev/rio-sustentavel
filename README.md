@@ -2,20 +2,47 @@
 
 Website educacional sobre energia limpa e consumo consciente de energia no estado do Rio de Janeiro.
 
-## 📋 Sobre o Projeto
+<p align="center">
+	<img alt="Javascript" src="https://img.shields.io/badge/Javascript-0d1b2a?style=for-the-badge&logo=javascript">
+	<img src = "https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white"/>  
+	<img src = "https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white"/>  
+</p>
 
+<p align="center">
+ <a href="#about">Sobre o Projeto</a> •
+ <a href="#objectives">Objetivos</a> •
+ <a href="#funcionalities">Funcionalidades</a> •
+ <a href="#data">Dados</a> •
+ <a href="#technologies">Tecnologias</a> •
+ <a href="#style">Estilo</a> •
+ <a href="#structure">Estrtura</a> •
+ <a href="#how-to">Como usar</a> •
+ <a href="#impact">Impacto</a> •
+ <a href="#refs">Referências</a> •
+ <a href="#final">Considerações</a>
+</p>
+
+<img width="1906" height="929" alt="Screenshot 2026-07-27 at 16 51 28" src="https://github.com/user-attachments/assets/0ea0f130-807e-4a17-ad07-44543dbebeaf" />
+
+
+
+## 📋 Sobre o Projeto
+<p id='about'>
 Rio Sustentável é uma aplicação web desenvolvida para conscientizar e auxiliar a população do estado do Rio de Janeiro sobre o consumo consciente de energia elétrica e a importância das energias renováveis.
+</p>
 
 ## 🎯 Objetivos
-
+<p id='objectives'>
 1. **Desenvolvimento Sustentável**: Ajudar usuários a desenvolver métodos sustentáveis para consumo de energia
 2. **Educação**: Ensinar ferramentas para uso moderado de energia
 3. **Economia Financeira**: Apresentar instruções que auxiliam na redução de custos mensais
 4. **Energia Limpa**: Incentivar e otimizar a produção de energia limpa e renovável
 5. **Inovação**: Promover lógica econômica para reduzir impactos ambientais negativos
+</p>
 
 ## 🚀 Funcionalidades
-
+<p id='funcionalities'>
+  
 ### 📱 Páginas
 
 - **Home (index.html)**: Página inicial com visão geral do projeto e estatísticas
@@ -43,23 +70,12 @@ Rio Sustentável é uma aplicação web desenvolvida para conscientizar e auxili
   - Scroll suave entre seções
   - Fade-in ao visualizar elementos
   - Transições suaves em botões e cards
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estrutura semântica e acessível
-- **CSS3**: 
-  - Design moderno com variáveis CSS
-  - Flexbox e Grid Layout
-  - Animações e transições
-  - Mobile-first approach
-- **JavaScript (Vanilla)**: 
-  - Calculadora de consumo
-  - Manipulação do DOM
-  - Event listeners
-  - Intersection Observer para animações
+</p>
 
 ## 📊 Dados do Rio de Janeiro
 
+<p id="data">
+  
 ### Energia
 - Tarifa média: R$ 0,85/kWh (Light)
 - Alta irradiação solar: ~5,5 kWh/m²/dia
@@ -71,7 +87,28 @@ Rio Sustentável é uma aplicação web desenvolvida para conscientizar e auxili
 - Até 95% de economia com energia solar
 - 500kg de CO₂ evitados por família/ano
 
+</p>
+
+## 🛠️ Tecnologias Utilizadas
+
+<p id="technologies">
+  
+- **HTML5**: Estrutura semântica e acessível
+- **CSS3**: 
+  - Design moderno com variáveis CSS
+  - Flexbox e Grid Layout
+  - Animações e transições
+  - Mobile-first approach
+- **JavaScript (Vanilla)**: 
+  - Calculadora de consumo
+  - Manipulação do DOM
+  - Event listeners
+  - Intersection Observer para animações
+</p>
+
 ## 🎨 Paleta de Cores
+
+<p id="style">
 
 - **Verde Primário**: `#10b981` (Sustentabilidade)
 - **Azul Secundário**: `#0ea5e9` (Água/Energia)
@@ -79,8 +116,12 @@ Rio Sustentável é uma aplicação web desenvolvida para conscientizar e auxili
 - **Cinza Escuro**: `#1f2937` (Texto)
 - **Branco/Cinza Claro**: Background
 
+</p>
+
 ## 📁 Estrutura de Arquivos
 
+<p id="structure">
+  
 ```
 Rio-sustentavel/
 ├── index.html                 # Página inicial
@@ -96,7 +137,11 @@ Rio-sustentavel/
 └── auditoria-configuracao.md  # Auditoria de qualidade e conformidade
 ```
 
+</p>
+
 ## 🚀 Como Usar
+
+<p id="how-to">
 
 1. Clone ou baixe o repositório
 2. Abra o arquivo `index.html` em um navegador moderno
@@ -132,8 +177,13 @@ Rio-sustentavel/
 - Use chuveiro na posição "verão"
 - Acumule roupas para passar de uma vez
 - Escolha aparelhos com selo Procel A
+  
+</p>
+
 
 ## 🌍 Impacto Ambiental
+
+<p id="impact">
 
 ### Energias Renováveis vs Combustíveis Fósseis
 
@@ -150,9 +200,14 @@ Rio-sustentavel/
 - ❌ Poluição atmosférica
 - ❌ Mudanças climáticas
 - ❌ Custos crescentes
+  
+</p>
+
 
 ## 📚 Referências
 
+<p id="refs">
+  
 - ANEEL - Agência Nacional de Energia Elétrica
 - EPE - Empresa de Pesquisa Energética
 - Light - Concessionária de energia do RJ
@@ -162,7 +217,11 @@ Rio-sustentavel/
 - ONU - Objetivos de Desenvolvimento Sustentável
 - IPCC - Painel Intergovernamental sobre Mudanças Climáticas
 
+</p>
+
 ## 🎓 Projeto Universitário
+
+<p id="final">
 
 Este é um projeto universitário desenvolvido para fins educacionais sobre sustentabilidade e energia limpa no estado do Rio de Janeiro.
 
@@ -196,4 +255,5 @@ Este é um projeto educacional. Sugestões e melhorias são bem-vindas!
 ---
 
 **© 2025 Rio Sustentável - Promovendo energia limpa e consumo consciente no Rio de Janeiro** 🌱⚡
-
+  
+</p>
