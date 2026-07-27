@@ -34,7 +34,8 @@ Rio Sustentável é uma aplicação web desenvolvida para conscientizar e auxili
 
 ## 🎯 Objetivos
 <p id='objectives'>
-1. **Desenvolvimento Sustentável**: Ajudar usuários a desenvolver métodos sustentáveis para consumo de energia
+	
+1. **Desenvolvimento Sustentável** : Ajudar usuários a desenvolver métodos sustentáveis para consumo de energia
 2. **Educação**: Ensinar ferramentas para uso moderado de energia
 3. **Economia Financeira**: Apresentar instruções que auxiliam na redução de custos mensais
 4. **Energia Limpa**: Incentivar e otimizar a produção de energia limpa e renovável
