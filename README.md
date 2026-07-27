@@ -19,7 +19,8 @@ Website educacional sobre energia limpa e consumo consciente de energia no estad
  <a href="#how-to">Como usar</a> •
  <a href="#impact">Impacto</a> •
  <a href="#refs">Referências</a> •
- <a href="#final">Considerações</a>
+ <a href="#final">Considerações</a> •
+ <a href="#license">License</a>
 </p>
 
 <img width="1906" height="929" alt="Screenshot 2026-07-27 at 16 51 28" src="https://github.com/user-attachments/assets/0ea0f130-807e-4a17-ad07-44543dbebeaf" />
@@ -244,16 +245,12 @@ Este é um projeto universitário desenvolvido para fins educacionais sobre sust
   - Conformidade com Práticas Ágeis
   - Status: ✅ 100% Aprovado
 
-## 📝 Licença
-
-Projeto universitário - Livre para uso educacional e não comercial.
-
-## 👥 Contribuições
-
-Este é um projeto educacional. Sugestões e melhorias são bem-vindas!
-
----
-
-**© 2025 Rio Sustentável - Promovendo energia limpa e consumo consciente no Rio de Janeiro** 🌱⚡
-  
+<p id="license">
+	
+## 📝 License
 </p>
+
+This project is under license [MIT](./LICENSE).
+
+Made with 💓 by Kauane Santos 👋 [Contact me!](https://www.linkedin.com/in/kauane-santos-dev/)
+
